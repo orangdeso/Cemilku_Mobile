@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragmentHome">
+    <fragment
+        android:id="@+id/fragment_produk"
+        android:name="com.example.cemilku.Produk"
+        android:label="fragment_produk"
+        tools:layout="@layout/fragment_produk" />
+    <fragment
+        android:id="@+id/fragment_laporan"
+        android:name="com.example.cemilku.Laporan"
+        android:label="fragment_laporan"
+        tools:layout="@layout/fragment_laporan" />
+    <fragment
+        android:id="@+id/fragment_pesanan"
+        android:name="com.example.cemilku.Pesanan"
+        android:label="fragment_pesanan"
+        tools:layout="@layout/fragment_pesanan" />
+    <fragment
+        android:id="@+id/fragment_saya"
+        android:name="com.example.cemilku.Saya"
+        android:label="fragment_saya"
+        tools:layout="@layout/fragment_saya" />
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.cemilku.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>
