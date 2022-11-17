@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragmentHome"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+    <item
+        android:id="@+id/fragment_produk"
+        android:title="Produk"
+        android:icon="@drawable/ic_produk"/>
+    <item
+        android:id="@+id/fragment_pesanan"
+        android:title="Pesanan"
+        android:icon="@drawable/ic_store"/>
+    <item
+        android:id="@+id/fragment_laporan"
+        android:title="Laporan"
+        android:icon="@drawable/ic_assignment" />
+    <item
+        android:id="@+id/fragment_saya"
+        android:title="Saya"
+        android:icon="@drawable/ic_person" />
+
+</menu>
