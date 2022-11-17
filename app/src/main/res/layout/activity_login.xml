@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
+    android:background="@color/white"
     tools:context=".Activity.Login">
 
     <ImageButton
@@ -77,10 +76,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:cardCornerRadius="10dp"
                 android:layout_marginBottom="120dp"
-                android:layout_marginRight="20dp"
-                app:cardBackgroundColor="@color/white">
+                >
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txt_inputan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
@@ -90,6 +87,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     app:passwordToggleTint="@color/ireng">
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_username"
                         android:hint="Username"
                         android:inputType="textEmailAddress"
                         android:layout_width="match_parent"
@@ -106,24 +104,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cardView2"
                 android:layout_marginTop="30dp"
-                android:layout_marginRight="20dp"
                 app:cardCornerRadius="10dp">
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txt_inputan2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:passwordToggleTint="@color/ireng">
+                    app:passwordToggleEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_password"
                         android:hint="Password"
                         android:inputType="textPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableEnd="@drawable/ic_eye"
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -162,7 +158,7 @@
         android:background="@drawable/button_shape"/>
 
     <TextView
-        android:id="@+id/editText"
+        android:id="@+id/lupaPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/btn_1"
