@@ -8,23 +8,22 @@ import android.os.Handler;
 
 import com.example.cemilku.R;
 
-public class SplashScreen extends AppCompatActivity {
+public class Awal extends AppCompatActivity {
 
-    private int waktu_loading = 2000;
-
+    private int waktu_loading = 3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_awal);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent itn = new Intent(SplashScreen.this, Home.class);
+                Intent itn = new Intent(Awal.this, MainActivity.class);
                 startActivity(itn);
                 finish();
             }
         }, waktu_loading);
-    }
 
+    }
 }
