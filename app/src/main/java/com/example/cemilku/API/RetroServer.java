@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroServer {
-    private static final String baseURL = "http://192.168.137.57/Php Vs Code/Cemilku/";
+    private static final String baseURL = "http://192.168.1.8/Php Vs Code/Cemilku/";
     private static Retrofit retro;
 
     public static Retrofit getClient(){
