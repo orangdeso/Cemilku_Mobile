@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.cemilku.API.APIRequestData;
 import com.example.cemilku.API.RetroServer;
+import com.example.cemilku.Model.DataItem;
 import com.example.cemilku.Model.ResponseModel;
 import com.example.cemilku.R;
 import com.google.android.material.textfield.TextInputEditText;
@@ -56,7 +57,7 @@ public class Login extends AppCompatActivity implements OnClickListener{
                 login(email,pass);
                 break;
             case R.id.lupaPassword:
-                Intent intent = new Intent(this, LupaPassword.class);
+                Intent intent = new Intent(this, LupaPassword2.class);
                 startActivity(intent);
                 break;
             case R.id.ic_1:
@@ -78,7 +79,12 @@ public class Login extends AppCompatActivity implements OnClickListener{
 
     private void login(String email, String pass) {
         if(email.equals("")||pass.equals("")){
-            Toast.makeText(Login.this, "Harap Lengkapi", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(Login.this, "Harap Lengkapi Data", Toast.LENGTH_SHORT).show();
+            if(email.equals("")){
+                Toast.makeText(Login.this, "Email Kosong", Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(Login.this, "Password Kosong", Toast.LENGTH_SHORT).show();
+            }
         }else{
             APIRequestData api = RetroServer.getClient().create(APIRequestData.class);
             Call<ResponseModel> loginCall = api.loginResponse(email, pass);
@@ -86,6 +92,8 @@ public class Login extends AppCompatActivity implements OnClickListener{
                 @Override
                 public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                     if (response.body().getKode() == 1){
+                        DataItem dataItem = response.body().getData().get(0);
+                        SaveAccount.writeDataPembeli(Login.this, dataItem);
                         Toast.makeText(Login.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(Login.this, SplashScreen.class);
                         startActivity(intent);
@@ -94,7 +102,6 @@ public class Login extends AppCompatActivity implements OnClickListener{
                         Toast.makeText(Login.this, "Username atau Password Salah", Toast.LENGTH_SHORT).show();
                     }
                 }
-
 
                 @Override
                 public void onFailure(Call<ResponseModel> call, Throwable t) {
