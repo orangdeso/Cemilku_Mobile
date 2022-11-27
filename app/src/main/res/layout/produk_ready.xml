@@ -1,34 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_marginRight="20dp"
         android:layout_width="150dp"
-        android:layout_height="150dp">
-        <LinearLayout
+        android:layout_height="155dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <ImageView
+                android:id="@+id/iv_gambar"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@drawable/ujicoba"/>
+                android:background="@drawable/ujicoba"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
-                android:layout_marginTop="3dp"
+                android:id="@+id/txt_namaBarang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppinssemibold"
                 android:text="Dijual Rengga"
                 android:textSize="15sp"
-                android:fontFamily="@font/poppinssemibold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="18 Stok"
-                android:textSize="13sp"
-                android:fontFamily="@font/poppinsregular" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_gambar" />
 
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Stok"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_namaBarang" />
+
+            <TextView
+                android:id="@+id/txt_stok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="15"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/textView24"
+                app:layout_constraintTop_toBottomOf="@+id/txt_namaBarang" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

@@ -7,29 +7,34 @@
     android:layout_marginHorizontal="20dp"
     android:layout_marginVertical="50dp"
     android:orientation="vertical"
-    tools:context=".FragmentHome">
-
-    <androidx.cardview.widget.CardView
-         android:layout_width="match_parent"
-         android:layout_height="40dp"
-         app:cardBackgroundColor="#E35562"
-         app:layout_constraintTop_toTopOf="parent">
-         <EditText
-             android:layout_marginTop="8dp"
-             android:layout_width="match_parent"
-             android:layout_height="50dp"
-             android:drawableStart="@drawable/ic_cari"
-             android:layout_gravity="center"
-             android:layout_marginHorizontal="10dp"/>
-    </androidx.cardview.widget.CardView>
+    tools:context=".Fragment.FragmentHome">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:background="@drawable/gambar3">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home_cari"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radius20"
+            android:drawableLeft="@drawable/ic_cari"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="10dp"
+            android:text="Search"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/abu"
+            android:textSize="15sp" />
+
         <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -43,70 +48,22 @@
                 android:orientation="vertical"
                 android:padding="10dp">
                 <TextView
+                    android:id="@+id/home_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ahmad"
+                    android:text="Username"
                     android:fontFamily="@font/poppinsmedium"
                     android:textSize="18sp"
                     android:textColor="@color/white"/>
 
                 <TextView
+                    android:id="@+id/home_alamat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=" Kota Kediri"
+                    android:text="  Alamat"
                     android:drawableLeft="@drawable/ic_lokasi"
                     android:fontFamily="@font/poppinsregular"
                     android:textSize="12sp"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Pesanan Masuk"
-                    android:textSize="15sp"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:textColor="@color/white"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="135"
-                    android:textSize="13sp"
-                    android:fontFamily="@font/poppinsregular"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Total Pesanan"
-                    android:textSize="15sp"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:textColor="@color/white"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="135"
-                    android:textSize="13sp"
-                    android:fontFamily="@font/poppinsregular"
                     android:textColor="@color/white"/>
             </LinearLayout>
         </LinearLayout>
@@ -129,7 +86,8 @@
         <HorizontalScrollView
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -163,39 +121,202 @@
     </LinearLayout>
 
     <LinearLayout
-        android:padding="20dp"
+        android:paddingLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Produk Ready"
+            android:text="Dashboard"
             android:fontFamily="@font/poppinsbold"
             android:textColor="@color/ireng"
             android:textSize="18sp"/>
 
-        <ScrollView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <androidx.recyclerview.widget.RecyclerView
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    />
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp">
 
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_barang" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Jumlah Barang"
+                        android:textColor="@color/ireng"
+                        android:textSize="17sp" />
 
-        </ScrollView>
+                    <TextView
+                        android:id="@+id/home_jumlahBarang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="0"
+                        android:textSize="16sp" />
 
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_checkout" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Pesanan Masuk"
+                        android:textColor="@color/ireng"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/home_pesananMasuk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="0"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_barang_keluar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Barang Keluar"
+                        android:textColor="@color/ireng"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/home_barangKeluar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="0"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_money" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Pendapatan"
+                        android:textColor="@color/ireng"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/home_pendapatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="0"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>
-
 
 </LinearLayout>

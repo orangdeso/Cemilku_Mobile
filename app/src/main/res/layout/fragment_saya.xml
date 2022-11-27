@@ -4,17 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Saya">
+    android:layout_marginVertical="50dp"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".Fragment.Saya">
 
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/gambar4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/saya_gambarprofil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="250dp"
+            android:padding="30dp"
+            android:src="@drawable/profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/saya_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Ahmad"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/saya_gambarprofil"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/saya_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="email"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/saya_gambarprofil"
+            app:layout_constraintTop_toBottomOf="@+id/saya_username" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saya_btnAkun"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SAYA"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_person"
+        android:drawableEnd="@drawable/ic_row_kanan"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:paddingVertical="15dp"
+        android:text="Akun"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/ireng"
+        android:textSize="18sp"
+        android:layout_marginTop="90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saya_btnAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_about"
+        android:drawableEnd="@drawable/ic_row_kanan"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:paddingVertical="15dp"
+        android:text="Tentang Cemilku"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/ireng"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saya_btnAkun"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saya_btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Logout"
+        android:drawableStart="@drawable/ic_logout"
+        android:drawableEnd="@drawable/ic_row_kanan"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:paddingVertical="15dp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/ireng"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saya_btnAbout"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
