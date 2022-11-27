@@ -5,12 +5,14 @@ public class DataItem {
     private String nama_user;
     private String telpon;
     private String password;
+    private String alamat;
 
     public DataItem(String email, String nama_user, String telpon, String password){
         this.email = email;
         this.nama_user = nama_user;
         this.telpon = telpon;
         this.password = password;
+        this.alamat = alamat;
     }
 
     public String getEmail() {
@@ -43,5 +45,13 @@ public class DataItem {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setAlamat(String alamat){
+        this.alamat = alamat;
+    }
+
+    public String getAlamat() {
+        return alamat;
     }
 }
