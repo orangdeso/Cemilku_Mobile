@@ -1,13 +1,12 @@
 package com.example.cemilku.Model;
 
-import java.util.List;
+public class BarangKaluarResponse {
 
-public class JumlahBarangResponse {
     private int kode;
     private String message;
-    public JumlahBarangData data;
+    public BarangKeluarData data;
 
-    public JumlahBarangResponse(int kode, String message, JumlahBarangData data) {
+    public BarangKaluarResponse(int kode, String message, BarangKeluarData data) {
         this.kode = kode;
         this.message = message;
         this.data = data;
@@ -29,11 +28,11 @@ public class JumlahBarangResponse {
         this.message = message;
     }
 
-    public JumlahBarangData getData() {
+    public BarangKeluarData getData() {
         return data;
     }
 
-    public void setData(JumlahBarangData data) {
+    public void setData(BarangKeluarData data) {
         this.data = data;
     }
 }
