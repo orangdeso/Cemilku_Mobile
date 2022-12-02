@@ -28,6 +28,7 @@ public class AkunActivity extends AppCompatActivity {
 
     ImageButton btn_back, gambar;
     AppCompatButton btn_edit, btn_kembali, btn_save;
+
     TextView tv1, tv2, tv3, tv4, tvA1, tvA2, tvA3, tvA4, tvA5, et2;
     EditText et1, et3, et4;
 
