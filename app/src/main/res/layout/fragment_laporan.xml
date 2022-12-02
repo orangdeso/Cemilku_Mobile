@@ -6,16 +6,146 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.Laporan">
 
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LAPORAN"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:text="Laporan Penjualan"
+                android:textColor="@color/abu2"
+                android:textSize="20sp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView1"
+        tools:layout_editor_absoluteX="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Nama Anda"
+                android:textColor="@color/abang"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/laporan_txt_namaUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Uji Coba"
+                android:textColor="@color/abu2"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Periode Laporan Penjualan"
+                android:textColor="@color/abang"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/laporan_txt_namaUser" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Dari Tanggal"
+                android:textColor="@color/abang"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <TextView
+                android:id="@+id/laporan_et_dariTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:ems="10"
+                android:hint="Enter Date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Sampai Tanggal"
+                android:textColor="@color/abang"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/laporan_et_dariTanggal" />
+
+            <EditText
+                android:id="@+id/et_sampaiTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:ems="10"
+                android:hint="Enter Date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="150dp"
+        android:layout_marginTop="50dp"
+        android:text="Send"
+        android:textColor="@color/white"
+        android:background="@drawable/radius10"
+        app:layout_constraintTop_toBottomOf="@+id/cardView7"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,8 +60,9 @@
                     android:id="@+id/home_alamat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="  Alamat"
+                    android:text="Alamat"
                     android:drawableLeft="@drawable/ic_lokasi"
+                    android:drawablePadding="7dp"
                     android:fontFamily="@font/poppinsregular"
                     android:textSize="12sp"
                     android:textColor="@color/white"/>
@@ -135,7 +136,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="330dp"
             android:layout_marginTop="5dp">
 
             <androidx.cardview.widget.CardView
@@ -233,7 +234,7 @@
                 android:layout_columnWeight="1"
                 app:cardCornerRadius="15dp"
                 app:cardElevation="6dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView4">
 
@@ -277,7 +278,7 @@
                 android:layout_columnWeight="1"
                 app:cardCornerRadius="15dp"
                 app:cardElevation="6dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView5">
 
