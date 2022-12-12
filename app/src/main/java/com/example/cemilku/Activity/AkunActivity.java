@@ -66,7 +66,7 @@ public class AkunActivity extends AppCompatActivity {
                 alertDialogBuilder.setView(v);
                 AlertDialog alert = alertDialogBuilder.create();
                 alert.show();
-                gambar = v.findViewById(R.drawable.gambar7);
+                gambar = v.findViewById(R.drawable.gambar);
                 tvA1 = v.findViewById(R.id.alert_txt);
                 tvA2 = v.findViewById(R.id.alert_txtNama);
                 tvA3 = v.findViewById(R.id.alert_txtEmail);
