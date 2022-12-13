@@ -35,7 +35,7 @@ public class AdapterLaporan extends RecyclerView.Adapter<AdapterLaporan.HolderDa
     @Override
     public void onBindViewHolder(@NonNull HolderData holder, int position) {
         LaporanData lp = data.get(position);
-
+ 
         holder.tv1.setText(lp.getIdOrders());
         holder.tv2.setText(lp.getPlacedOn());
         holder.tv3.setText(lp.getTotalPrice());
