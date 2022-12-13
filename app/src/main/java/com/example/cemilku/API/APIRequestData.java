@@ -46,8 +46,10 @@ public interface APIRequestData {
     Call<BarangKaluarResponse> barang_keluar(
     );
 
-    @GET("laporan.php")
-    Call<LaporanResponse> tampil_laporan(
+    @FormUrlEncoded
+    @POST("laporan.php")
+    Call<LaporanResponse> laporan(
+            @Field("placed_on") String placed_on
     );
 
     @FormUrlEncoded
