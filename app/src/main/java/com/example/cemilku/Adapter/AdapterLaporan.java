@@ -36,11 +36,11 @@ public class AdapterLaporan extends RecyclerView.Adapter<AdapterLaporan.HolderDa
     public void onBindViewHolder(@NonNull HolderData holder, int position) {
         LaporanData lp = data.get(position);
 
-        holder.tv1.setText(lp.getId_orders());
-        holder.tv2.setText(lp.getPlaced_on());
-        holder.tv3.setText(lp.getTotal_products());
-        holder.tv4.setText(lp.getTotal_price());
-        holder.tv5.setText(lp.getNama_user());
+        holder.tv1.setText(lp.getIdOrders());
+        holder.tv2.setText(lp.getPlacedOn());
+        holder.tv3.setText(lp.getTotalPrice());
+        holder.tv4.setText(lp.getQty());
+        holder.tv5.setText(lp.getNamaUser());
 
     }
 
